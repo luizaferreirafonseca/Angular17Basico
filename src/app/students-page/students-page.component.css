@@ -86,7 +86,7 @@ linhas {
    
 }
 
-.flor-conteudo{
+.cards-conteudo{
     
     padding: 10px;
     text-align: center;
@@ -117,7 +117,7 @@ box-shadow: 0px 10px 10px 0px rgba(163,163,163,0.3);
 
 
 
-.nome-flores {
+.nome-cards {
     font-size: 1rem;
     
     letter-spacing: 1px;

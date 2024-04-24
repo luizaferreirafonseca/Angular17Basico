@@ -6,9 +6,9 @@
 
         <div class="flex-container">
             <div class="cont">
-                <div class="flor-conteudo" *ngFor="let card of cards "  [ngStyle]="card === 'Lançamento de Notas' ? { 'color': ' rgb(4, 4, 112)' } : {}">
+                <div class="cards-conteudo" *ngFor="let card of cards "  [ngStyle]="card === 'Lançamento de Notas' ? { 'color': ' rgb(4, 4, 112)' } : {}">
                     
-                    <p class="nome-flores">{{card}}</p>
+                    <p class="nome-cards">{{card}}</p>
                     
                 </div>
             </div>
