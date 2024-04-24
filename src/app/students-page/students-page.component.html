@@ -1,0 +1,112 @@
+
+<app-header></app-header>
+
+<div class="total-content d-flex flex-column justify-content-center align-items-center">
+    <div class="conteudo">
+
+        <div class="flex-container">
+            <div class="cont">
+                <div class="flor-conteudo" *ngFor="let card of cards "  [ngStyle]="card === 'Lançamento de Notas' ? { 'color': ' rgb(4, 4, 112)' } : {}">
+                    
+                    <p class="nome-flores">{{card}}</p>
+                    
+                </div>
+            </div>
+
+            
+        </div>
+
+
+    </div>
+
+    <div class="container">
+        <h2 class="mb-4 fs-3">Formulário de Notas</h2>
+        <form  class="d-flex flex-column " [formGroup]="form">
+            <div class="form-group col-md-4">
+                <label for="nomeAluno" class="pb-1">Nome do aluno</label>
+                <input type="text" class="form-control p-1" id="nomeAluno" placeholder="Insira o nome do aluno" formControlName="name" required>
+                @if(form.get('name')?.hasError('required') && form.get('name')?.touched){
+                    <p class="messages">Este campo é obrigatório.</p>
+                }
+                @if (form.get('name')?.hasError('minlength') && form.get('name')?.touched) {
+                    <p class="messages">O campo nome precisa conter pelo menos 3 caracteres.</p>
+                }
+                @if (form.get('name')?.hasError('pattern') && form.get('name')?.touched){
+                    <p class="messages">O campo nome precisa ter somente letras.</p>
+                }
+            </div>
+            <div class="form-row d-flex flex-column">
+                <div class="form-group col-md-4">
+                <label for="nota1"  class="pb-1">Nota - Ciclo 1</label>
+                <input type="number" class="form-control p-1" id="nota1" placeholder="Insira a nota 1" formControlName="gradeOne"  required>
+                @if(form.get('gradeOne')?.hasError('required') && form.get('gradeOne')?.touched){
+                    <p class="messages">Este campo é obrigatório.</p>
+                }
+                @if (form.get('gradeOne')?.hasError('min') && form.get('gradeOne')?.touched) {
+                    <p class="messages">O campo só aceita números de 0 a 10.</p>
+                }
+                @if (form.get('gradeOne')?.hasError('max') && form.get('gradeOne')?.touched){
+                    <p class="messages">O campo só aceita números de 0 a 10.</p>
+                }
+                </div>
+                <div class="form-group col-md-4">
+                <label for="nota2"  class="pb-1">Nota - Ciclo 2</label>
+                <input type="number" class="form-control p-1" id="nota2" placeholder="Insira a nota 2" formControlName="gradeTwo" required>
+                @if(form.get('gradeTwo')?.hasError('required') && form.get('gradeTwo')?.touched){
+                    <p class="messages">Este campo é obrigatório.</p>
+                }
+                @if (form.get('gradeTwo')?.hasError('min') && form.get('gradeTwo')?.touched) {
+                    <p class="messages">O campo só aceita números de 0 a 10.</p>
+                }
+                @if (form.get('gradeTwo')?.hasError('max') && form.get('gradeTwo')?.touched){
+                    <p class="messages">O campo só aceita números de 0 a 10.</p>
+                }
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2 p-1" (click)="registerStudent()" *ngIf="selectButton">Enviar</button>
+            <button type="submit" class="btn btn-primary p-1" *ngIf="removeButton" (click)="removeStudent()">Remover</button>
+            <button type="submit" class="btn btn-primary p-1" *ngIf="updateButton" (click)="updateStudent()">Atualizar</button>
+            <button type="submit" class="btn btn-primary p-1" *ngIf="updateButton" (click)="backToRegister()">Voltar</button>
+        </form>
+
+
+        <div class="listagem pt-5 d-flex flex-column">
+            <h2 class="fs-3">Listagem de alunos</h2>
+            <p>Os alunos do 8º ano são divididos em duas turmas: A81 e A82. Nessa lista, você pode conferir todos os alunos juntos. Clique no botão abaixo:</p> 
+            
+            <button class="list-button" (click)="getAllStudents()">Acesse a lista</button>
+        </div>
+    </div>
+
+    
+    
+
+    <div class="container" *ngIf="getStudents">
+        <h2 class="mb-4 fs-3">Tabela de alunos</h2>
+        <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome do Aluno</th>
+                <th scope="col">Nota 1</th>
+                <th scope="col">Nota 2</th>
+                <th scope="col">Média</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let student of list; index as indice">
+                <td>{{indice}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.gradeOne}}</td>
+                <td>{{student.gradeTwo}}</td>
+                <td>{{student | average}}</td>
+                <td><button type="button" class="select-button" (click)="getStudent(indice)">Selecionar</button></td>
+                
+            </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</div>
