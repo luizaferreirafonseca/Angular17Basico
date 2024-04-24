@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding-inline-start: 0;
+}
+
+footer{
+    background-color: rgb(193, 193, 193);
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}

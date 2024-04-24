@@ -1,22 +1,22 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
 
 }
 
-.container{
+.container {
     padding-top: 3%;
 }
 
-.container h2{
+.container h2 {
     color: rgb(84, 84, 84);
 }
 
-.select-button{
+.select-button {
     background-color: rgb(193, 193, 193);
     border: none;
     border-radius: 4px;
@@ -25,19 +25,19 @@
     font-size: 0.9rem;
 }
 
-form{
+form {
     gap: 10px;
 }
 
-.form-row{
+.form-row {
     gap: 10px;
 }
 
-.listagem{
+.listagem {
     gap: 20px;
 }
 
-.list-button{
+.list-button {
     width: 20%;
     background-color: rgb(25, 2, 74);
     border: none;
@@ -47,47 +47,37 @@ form{
 
 }
 
-.total-content{
+.total-content {
     height: 100%;
 
-width: 100%;
-margin-bottom: 5%;
-margin-top: 5%;
-}
-
-.lancamento-notas{
-    color: rgb(4, 4, 112);
+    width: 100%;
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 
-
-linhas {
-    cursor: pointer;
-    line-height: 13px;
-}
-
-.conteudo {
+.content-center {
     padding-left: 60px;
-    
+
     width: 100%;
     font-family: "Poppins", sans-serif;
-    
+
 }
 
 
 .flex-container {
     display: flex;
-    
-    
+
+
     flex-wrap: wrap;
-  
+
     font-family: 'Montserrat', sans-serif;
 
-   
+
 }
 
-.cards-conteudo{
-    
+.cards-content {
+
     padding: 10px;
     text-align: center;
     display: flex;
@@ -95,36 +85,36 @@ linhas {
     flex-wrap: wrap;
     align-items: center;
     background-color: rgb(128, 136, 183);
-    width:120px;
+    width: 120px;
     height: 100px;
     color: white;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 10px 10px 0px rgba(163,163,163,0.3);
--moz-box-shadow: 0px 10px 10px 0px rgba(163,163,163,0.3);
-box-shadow: 0px 10px 10px 0px rgba(163,163,163,0.3);
-    
+    -webkit-box-shadow: 0px 10px 10px 0px rgba(163, 163, 163, 0.3);
+    -moz-box-shadow: 0px 10px 10px 0px rgba(163, 163, 163, 0.3);
+    box-shadow: 0px 10px 10px 0px rgba(163, 163, 163, 0.3);
+
 
 }
 
-.cont{
+.cont {
     display: flex;
-   
+
     gap: 20px;
     padding-left: 10px;
     padding-right: 10px;
-    
+
 }
 
 
 
-.nome-cards {
+.name-cards {
     font-size: 1rem;
-    
+
     letter-spacing: 1px;
-    
+
 }
 
-.btn{
+.btn {
     width: 33%;
     background-color: rgb(193, 193, 193);
     border: none;
@@ -136,25 +126,24 @@ box-shadow: 0px 10px 10px 0px rgba(163,163,163,0.3);
 
 .container {
     margin-top: 20px;
-  }
-  
-  .table {
+}
+
+.table {
     width: 100%;
     border-collapse: collapse;
-  }
-  
-  .table th,
-  .table td {
+}
+
+.table th,
+.table td {
     padding: 12px;
     text-align: left;
-  }
-  
-  .table th {
+}
+
+.table th {
     background-color: rgb(128, 136, 183);
     color: #fff;
-  }
-  
-  .table tbody tr:nth-child(even) {
+}
+
+.table tbody tr:nth-child(even) {
     background-color: #f2f2f2;
-  }
-  
+}

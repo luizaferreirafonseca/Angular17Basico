@@ -2,13 +2,13 @@
 <app-header></app-header>
 
 <div class="total-content d-flex flex-column justify-content-center align-items-center">
-    <div class="conteudo">
+    <div class="content-center">
 
         <div class="flex-container">
             <div class="cont">
-                <div class="cards-conteudo" *ngFor="let card of cards "  [ngStyle]="card === 'Lançamento de Notas' ? { 'color': ' rgb(4, 4, 112)' } : {}">
+                <div class="cards-content" *ngFor="let card of cards "  [ngStyle]="card === 'Lançamento de Notas' ? { 'color': ' rgb(4, 4, 112)' } : {}">
                     
-                    <p class="nome-cards">{{card}}</p>
+                    <p class="name-cards">{{card}}</p>
                     
                 </div>
             </div>
@@ -110,3 +110,4 @@
         </div>
     </div>
 </div>
+<app-footer></app-footer>
