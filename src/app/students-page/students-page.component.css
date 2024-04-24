@@ -105,6 +105,12 @@ form {
 
 }
 
+.messages{
+    color: red;
+    font-size: 0.8rem;
+    padding-top: 2px;
+}
+
 
 
 .name-cards {

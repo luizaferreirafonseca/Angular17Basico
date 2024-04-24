@@ -62,8 +62,10 @@ export class StudentsPageComponent {
     this.updateButton = false;
     this.removeButton = false;
     this.selectButton = true;
+    if(this.form.valid){
     this.list.push(this.form.value as Student)
     this.form.reset();
+  }
   }
 
 
@@ -90,10 +92,12 @@ export class StudentsPageComponent {
 
   updateStudent() {
 
+    if(this.form.valid){
     this.list[this.indice] = this.form.value as Student;
 
 
     this.form.reset();
+  }
 
 
   }
